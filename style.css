@@ -254,10 +254,9 @@ h1 {
   grid-area: Results;
   justify-self: center;
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.4);
   width: 95%;
   height: 100%;
-
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -270,7 +269,7 @@ h1 {
 .searchResults-Container::-webkit-scrollbar {
   display: none;
 }
-.searchResults-Style {
+/* .searchResults-Style {
   grid-area: Results;
   justify-self: center;
   border-radius: 0.5rem;
@@ -283,8 +282,8 @@ h1 {
   justify-content: space-evenly;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+/* scrollbar-width: none; Firefox */
+/* } */
 /* ==== Results Box ===== */
 .searchResults {
   width: 9rem;
