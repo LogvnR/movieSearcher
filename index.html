@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seacher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Welcome To The Movie Searcher</h1>
+    <div class="mainContainer">
+
+        <section class="searchBar-Container">
+            <form action="" class="mainForm">
+                <select name="userSelect" id="userSelect">
+                    <option value="NONE">Select An Option</option>
+                    <option value="actor">Actor/Actress</option>
+                    <option value="movie">Movie</option>
+                    <option value="tvShow">TV Show</option>
+                </select>
+                <input class="mainUserInput" name="mainUserInput" type="text" placeholder="Name or Title"
+                    autocomplete="off">
+                <button class="btn submitBtn">GO!</button>
+            </form>
+        </section>
+        <div class="searchResults-Container">
+
+        </div>
+        <img id="logo" src="LRCrownWhite.png" alt="">
+        <div class="blurContainer"></div>
+        <section class="searchResults-Style">
+
+        </section>
+
+        <section class="resetBtn-Container">
+            <button class="btn resetBtn">Reset</button>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
