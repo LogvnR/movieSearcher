@@ -4,11 +4,11 @@ const userSelect = document.querySelector('#userSelect');
 const userInput = document.querySelector('.mainUserInput');
 const submitBtn = document.querySelector('.submitBtn');
 const mainTitle = document.querySelector('h1');
+const mainBtn = document.querySelector('#menuBtn');
+
 // ===== Results Selectors =====
 const resetBtn = document.querySelector('.resetBtn');
 const resultContainer = document.querySelector('.searchResults-Container');
-// const result = document.querySelectorAll('.searchResults');
-// const actorSearch = document.querySelectorAll('.actorNameTxt');
 // ===== API Key =====
 const logvn = 'k_zfad24qn';
 
@@ -66,6 +66,16 @@ const entryCreatorCast = (actorImg, actorName, actorRole) => {
   resultContainer.appendChild(newDiv);
 };
 
+// ===== Button Controller =====
+const click = () => {
+  mainBtn.classList.toggle('is-active');
+  mainForm.classList.toggle('show');
+};
+
+mainBtn.addEventListener('click', function (e) {
+  click();
+});
+
 // ===== Input Options =====
 const inputErr = () => {
   mainTitle.innerText = 'Please Select Option Or Add a Name or Title';
@@ -76,9 +86,10 @@ const generalErr = () => {
 };
 
 const inputReset = () => {
-  mainTitle.innerText = 'Welcome To The Movie Searcher';
+  mainTitle.innerText = 'Click The Dropdown Menu To Start';
   userInput.value = '';
   userSelect.value = 'NONE';
+  click();
 };
 // ========== API Call ==========
 // ===== Actor Name =====
@@ -246,9 +257,11 @@ mainForm.addEventListener('submit', function (e) {
   } else if (userSelect.value === 'movie') {
     resultContainer.innerHTML = '';
     addMovie(userInput.value);
+    inputReset();
   } else {
     resultContainer.innerHTML = '';
     addSeries(userInput.value);
+    inputReset();
   }
 });
 

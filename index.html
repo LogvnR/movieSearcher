@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Seacher</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburgers.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,27 +15,44 @@
 </head>
 
 <body>
-    <h1>Welcome To The Movie Searcher</h1>
-    <div class="mainContainer">
-
-        <section class="searchBar-Container">
+    <section class="searchBar-Container">
+        <div class="searchBar-Main">
+            <button id="menuBtn" class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="title-Container">
+                <h2 class="menuTitle">Welcome To The Movie Searcher</h2>
+            </div>
+        </div>
+        <div class="form-Container">
             <form action="" class="mainForm">
-                <select name="userSelect" id="userSelect">
-                    <option value="NONE">Select An Option</option>
-                    <option value="actor">Actor/Actress</option>
-                    <option value="movie">Movie</option>
-                    <option value="tvShow">TV Show</option>
-                </select>
-                <input class="mainUserInput" name="mainUserInput" type="text" placeholder="Name or Title"
-                    autocomplete="off">
+                <section class="inputs">
+                    <select name="userSelect" id="userSelect">
+                        <option value="NONE">Search Option</option>
+                        <option value="actor">Actor/Actress</option>
+                        <option value="movie">Movie</option>
+                        <option value="tvShow">TV Show</option>
+                    </select>
+                </section>
+                <section class="inputs">
+                    <input class="mainUserInput" name="mainUserInput" type="text" autocomplete="off"
+                        placeholder="Name or Title">
+                </section>
+
                 <button class="btn submitBtn">GO!</button>
             </form>
-        </section>
+        </div>
+
+    </section>
+
+    <div class="mainContainer">
+        <h1>Click The Dropdown Menu To Start</h1>
+
         <div class="searchResults-Container">
 
         </div>
-        <!-- <img id="logo" src="LRCrownWhite.png" alt="">
-        <div class="blurContainer"></div> -->
         <section class="searchResults-Style">
 
         </section>
